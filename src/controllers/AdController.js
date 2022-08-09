@@ -28,6 +28,7 @@ module.exports = {
 
     res.json({ categories })
   },
+
   addAction: async (req, res) => {
     let { title, price, priceneg, desc, cat, token } = req.body
     const user = await User.findOne({ token }).exec()
@@ -105,6 +106,7 @@ module.exports = {
     const info = await newAd.save()
     res.json({ id: info._id })
   },
+
   getList: async (req, res) => {
     let { sort = "asc", offset = 0, limit = 8, q, cat, state } = req.query
     let filters = { status: true }
@@ -159,6 +161,7 @@ module.exports = {
 
     res.json({ ads, total })
   },
+
   getItem: async (req, res) => {
     let { id, other = null } = req.query
 
@@ -235,6 +238,7 @@ module.exports = {
       others,
     })
   },
+  
   editAction: async (req, res) => {
     let { id } = req.params
     let { title, status, price, priceneg, desc, cat, images, token } = req.body
