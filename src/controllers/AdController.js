@@ -147,7 +147,7 @@ module.exports = {
       if (defaultImg) {
         image = `${process.env.BASE}/media/${defaultImg.url}`
       } else {
-        image = `${process.env.BASE}/media/default.jpg`
+        image = `${process.env.BASE}/media/default.png`
       }
 
       ads.push({
@@ -202,7 +202,7 @@ module.exports = {
 
       for (let i in otherData) {
         if (otherData[i]._id.toString() != ad._id.toString()) {
-          let image = `${process.env.BASE}/media/default.jpg`
+          let image = `${process.env.BASE}/media/default.png`
 
           let defaultImg = otherData[i].images.find((e) => e.default)
           if (defaultImg) {
