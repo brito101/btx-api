@@ -4,5 +4,5 @@
 
 <ul>
 <li>service mongod start</li>
-<li></li>
-</ul>    
+<li>npm start</li>
+</ul>
